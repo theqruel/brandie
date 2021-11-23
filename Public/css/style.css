@@ -42,7 +42,7 @@
 	overflow: hidden;
   }
 
-  /*-------container------------------------------------*/
+  /*-------text------------------------------------*/
 
   p {
 	  font-family: montserrat;
@@ -56,8 +56,14 @@
 	  color: #000;
   }
 
+  h2 {
+	font-family: montserrat;
+	font-size: 50px;
+	color: #000;
+}
 
-  /*-------container------------------------------------*/
+
+/*-------container------------------------------------*/
 
 
 ._container {
@@ -83,7 +89,9 @@
 }
 
 
-  /*-------header------------------------------------*/
+/*-------header------------------------------------*/
+
+
 .header {
 	margin: 20px;
 	display: flex;
@@ -106,7 +114,55 @@
 
 
 
+/*-------main------------------------------------*/
 
+.mainPage {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.mainPage__logo {
+	position: relative;
+
+}
+.logo_text {
+	position: absolute;
+	top: 35%;
+	left: 7%;
+	/* margin: -13% 0 0 1.5%; */
+	
+}
+.mainPage__arrow {
+	position: relative;
+}
+.arrow__top {
+	position: absolute;
+	right: -4px;
+	top: -10px;
+	width: 30px;
+	height: 2px;
+	border-radius: 1px;
+	background-color: #000;
+	transform: rotate(45deg);
+}
+.arrow__center {
+	width: 120px;
+	height: 2px;
+	border-radius: 1px;
+	background-color: #000;
+}
+.arrow__bottom {
+	position: absolute;
+	right: -4px;
+	bottom: -10px;
+	width: 30px;
+	height: 2px;
+	border-radius: 1px;
+	background-color: #000;
+	transform: rotate(-45deg);
+}
+.mainPage__text {
+}
 
 
 
