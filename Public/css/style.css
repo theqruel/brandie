@@ -12,7 +12,7 @@
 	padding: 0;
 	border: 0;
 	box-sizing: border-box;
-	font-family: roboto;
+	font-family: Montserrat;
   }
   
   a {
@@ -59,6 +59,18 @@
 	font-family: montserrat;
 	font-size: 40px;
 	color: #000;
+}
+
+/*-------scroll bar------------------------------------*/
+
+::-webkit-scrollbar {
+	width: 8px;
+	background: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #999;
+	border-radius: 4px;
 }
 
 
@@ -118,7 +130,6 @@
 /*-------main------------------------------------*/
 
 .mainPage {
-	/* margin: 250px auto 300px; */
 	min-height: 100vh;
 	display: flex;
 	align-items: center;
@@ -219,30 +230,25 @@
 /*-------cards------------------------------------*/
 
 .cards {
-	margin-top: 200px;
+	margin-top: 50px;
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
 
-
 .cards__item {
 	width: 300px;
-	margin: 100px 10px 200px;
+	margin: 100px 0px 200px;
 	opacity: 0;
+	transform: translate(0px, 10px);
 }
 
-.cards__item:nth-child(3n+2) {
-	margin-top: 0px;
-}
-
-.cards__item:nth-child(3n+3) {
-	margin-top: -100px;
-}
 
 .cards__item._active {
 	width: 300px;
-	margin: 0px 10px 200px;
+	margin: 0px 0px 200px;
+	transform: translate(0px, 0px);
+
 	opacity: 1;
 	transition: 1s ease;
 
@@ -268,9 +274,52 @@
 }
 
 
+/*-------form------------------------------------*/
+
+.form__motion {
+	transform: translate(0px, 150px);
+	opacity: 0;
+}
+
+.form__motion._active {
+	transform: translate(0);
+	opacity: 1;
+	transition: 1s ease;
+}
+
+.formGroup {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
 
 
+.form__input {
+	margin: 40px 0;
+	padding: 10px 0;
+	min-width: 48%;
+	outline: none;
+	font-size: 20px;
+	color: #000;
+	border-bottom: solid 2px #000;
+}
 
+._inputMessage {
+	min-width: 100%;
+	box-sizing: border-box;
+	resize: none;
+}
+
+.form__button {
+	display: block;
+	margin: 40px auto;
+	padding: 10px 30px;
+	max-width: 300px;
+	background-color: #fff;
+	border: solid 2px #000;
+	font-size: 20px;
+
+}
 
 
 
@@ -278,19 +327,18 @@
 /*-------footer------------------------------------*/
 
 .footer {
-	margin: 20px auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	margin: 200px auto 20px;
 }
 
 .footer__line {
-	background-color: #000;
+	background-color: #999;
 	width: 100%;
 	height: 2px;
 	margin-bottom: 20px;
 }
 
-.footer_text {
+.footer__text {
 	text-align: center;
+	color: #999;
+	font-size: 15px;
 }

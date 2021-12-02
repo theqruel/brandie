@@ -91,7 +91,18 @@
 				</div>
 			</div>
 		</section>
-		<footer class="footer _container">
+		<form method="post" action="./feedback" class="form _container" id="form">
+			<div class="form__motion" id="motionItem">
+				<div class="formGroup">
+					<input name="name" required="required" class="form__input" type="text" title="Как вас зовут?" placeholder="Ваше имя">
+					<input name="name" required="required" class="form__input" type="text" title="Ваш e-mail" placeholder="Ваш e-mail">
+				</div>
+				<textarea name="message" class="form__input _inputMessage" title="Краткое описание задачи" placeholder="Краткое описание задачи"></textarea>
+				<div class="form__buttonBlock">
+				<button class="form__button">Отправить</button>
+			</div>
+		</form>
+		<footer class="footer">
 			<div class="footer__line"></div>
 			<p class="footer__text">brandie.ru</p>
 		</footer>

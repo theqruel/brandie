@@ -7,7 +7,7 @@ if (motionItems.length > 0) {
 			const motionItem = motionItems[index];
 			const motionItemHeight = motionItem.offsetHeight;
 			const motionItemOffset = offset(motionItem).top;
-			const motionStart = 4;
+			const motionStart = 8;
 
 			let motionItemPoint = window.innerHeight - motionItemHeight / motionStart;
 
