@@ -29,7 +29,6 @@
   
   h1, h2, h3, h4, h5, h6 {
 	font-weight: inherit;
-	font-size: 10px;
   }
   
   span {
@@ -58,7 +57,7 @@
 
   h2 {
 	font-family: montserrat;
-	font-size: 50px;
+	font-size: 40px;
 	color: #000;
 }
 
@@ -93,15 +92,17 @@
 
 
 .header {
-	margin: 20px;
+	padding: 20px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	position: fixed;
+	width: 100%;
 }
-.header__block {
-}
+
 .header__logo {
 }
+
 .header__rightBlock {
 	display: flex;
 	align-items: center;
@@ -117,6 +118,8 @@
 /*-------main------------------------------------*/
 
 .mainPage {
+	/* margin: 250px auto 300px; */
+	min-height: 100vh;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -192,6 +195,7 @@
 }
 
 .mainPage__text h2{
+	margin: 20px 0;
 	transform: translate(-10%, 0px);
 	opacity: 0;
 }
@@ -212,9 +216,56 @@
 }
 
 
+/*-------cards------------------------------------*/
+
+.cards {
+	margin-top: 200px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
 
 
+.cards__item {
+	width: 300px;
+	margin: 100px 10px 200px;
+	opacity: 0;
+}
 
+.cards__item:nth-child(3n+2) {
+	margin-top: 0px;
+}
+
+.cards__item:nth-child(3n+3) {
+	margin-top: -100px;
+}
+
+.cards__item._active {
+	width: 300px;
+	margin: 0px 10px 200px;
+	opacity: 1;
+	transition: 1s ease;
+
+}
+
+.cards__item._active:nth-child(3n+2) {
+	margin-top: -100px;
+
+}
+
+.cards__item._active:nth-child(3n+3) {
+	margin-top: -200px;
+}
+
+.item__photo {
+	width: 300px;
+	height: 400px;
+	border: 2px solid #000;
+}
+
+.item__text {
+	margin-top: 20px;
+}
 
 
 
@@ -227,7 +278,7 @@
 /*-------footer------------------------------------*/
 
 .footer {
-	margin: 1000px auto;
+	margin: 20px auto;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
